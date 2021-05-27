@@ -1,0 +1,24 @@
+.data-grid {
+    margin:1em 0;
+}
+
+.data-grid .row {
+    background-color: #cccccc;
+    margin:0.4em 0;
+    padding:0.2em;
+}
+
+.data-grid .forecast-cell {
+    background-color: #efefef;
+    margin:0.2em 0;
+}
+
+.data-grid .forecast-cell span {
+    display:block;
+    font-size: 0.8em;
+    text-align:center;
+}
+
+.user-message {
+    margin:1em 0
+}

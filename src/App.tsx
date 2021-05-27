@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
+import { useReducer } from 'react';
+import './App.css';
+import Router from './router';
+import {
+  DispatchContext,
+  StateContext
+} from './store/context';
+import { useCombineReducers } from './utils/hooks/useCombineReducers';
+import reducer from './store/reducer';
+import initialState from './store/state';
 function App() {
+  const [combinedReducers, combinedState] = useCombineReducers({
+    state: [reducer, initialState],
+  });
+  const [state, dispatch] =
+    useReducer(combinedReducers, combinedState) || {};
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DispatchContext.Provider value={dispatch}>
+      <StateContext.Provider value={state}>
+        <div className="App">
+          <Router />
+        </div>
+      </StateContext.Provider>
+    </DispatchContext.Provider>
   );
 }
+
+
 
 export default App;

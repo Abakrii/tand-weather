@@ -1,0 +1,8 @@
+{
+    "loginPage": {
+        "header": "Please Log In",
+        "loginLabel": "Please Enter Your User Name Username",
+        "passwordLabel": "Pleas Enter Your Password",
+        "submitLabel": "Submit"
+    }
+}
