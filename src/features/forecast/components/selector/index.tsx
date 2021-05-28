@@ -11,7 +11,4 @@ const Selector = ({ options, label, name, onChange }: any) => (
         </select>
     </div>
 )
-
-
-
 export default Selector;

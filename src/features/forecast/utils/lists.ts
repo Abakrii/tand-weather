@@ -16,14 +16,3 @@ export const locations = [
         text: 'Leeds'
     }
 ]
-
-export const formats = [
-    {
-        value: 'json',
-        text: 'JSON'
-    },
-    {
-        value: 'csv',
-        text: 'CSV'
-    }
-]
